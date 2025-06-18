@@ -1,0 +1,91 @@
+
+.vending-machine-container {
+  border: 2px solid #888;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  background: #fafafa;
+}
+.vending-header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.vending-body {
+  display: flex;
+  justify-content: space-between;
+}
+.slots {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-gap: 12px;
+}
+.slot {
+
+  text-align: center;
+   >div{
+    &:nth-child(1){
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    margin-bottom: 0.3em;
+   }
+}
+.slot.empty {
+  color: #bbb;
+  background: #f4f4f4;
+}
+.code {
+  font-size: 0.85em;
+  color: #888;
+}
+.side-panel {
+  margin-left: 24px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.side-panel label {
+  font-size: 0.95em;
+  font-weight: 600;
+}
+.side-panel input {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  font-size: 1em;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #eee;
+}
+.keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.keypad-row {
+  display: flex;
+  gap: 4px;
+}
+.keypad-row button {
+  width: 36px;
+  height: 36px;
+  font-size: 1.1em;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: #eaeaea;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.keypad-row button:hover {
+  background: #d3d3d3;
+}

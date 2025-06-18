@@ -67,7 +67,8 @@
               "buildTarget": "my-vending-machine:build:production"
             },
             "development": {
-              "buildTarget": "my-vending-machine:build:development"
+              "buildTarget": "my-vending-machine:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

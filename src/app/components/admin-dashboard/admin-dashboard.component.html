@@ -1,0 +1,32 @@
+<div class="admin-container">
+  <h1>Dashboard</h1>
+
+  <div class="dashboard-wrapper">
+    <div class="dashboard-content">
+
+      @for (product of products(); let index = $index; track product){
+        <div class="card">
+          <div class="product-info">
+            <h3>{{product.name}}</h3>
+            <p>( {{product.id}} )</p>
+            <p>{{ product.inventory }} X</p>
+            <p>CHF {{ product.price}}</p>
+          </div>
+
+          <div class="card-actions">
+            <button class="action-btn view-btn"
+                    [disabled]="!product.id"
+                    (click)="viewProduct(product.id ?? '')">View</button>
+            <button class="action-btn delete-btn"
+                    [disabled]="!product.id"
+                    (click)="deleteProduct(product.id ?? '')">Delete</button>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="button-container">
+      <button class="add-product-btn" (click)="openAddProductDialog()">+ New Product</button>
+    </div>
+  </div>
+</div>
+

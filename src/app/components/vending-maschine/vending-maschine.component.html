@@ -1,0 +1,41 @@
+<div class="vending-header">Vending Maschine</div>
+  <div class="vending-body">
+    <div class="slots">
+
+      @for (product of products(); let index = $index; track product){
+        <div class="slot">
+          <div>{{ product.name }}</div>
+          <div class="code">#{{ index }}</div>
+          <div>CHF {{ product.price.toFixed(2) }}</div>
+        </div>
+      }
+
+    </div>
+    <div class="side-panel">
+      <div>
+        <label>Your balance:</label>
+        <input type="text" [value]="'CHF ' + balance().amount.toFixed(2)" disabled>
+      </div>
+      <div>
+        <label>Your choice:</label>
+        <input type="text" [value]="choice" disabled>
+      </div>
+      <div class="keypad">
+        <button
+          *ngFor="let row of keypad"
+          class="keypad-row"
+          disabled
+          style="display:none"
+        ></button>
+        <ng-container *ngFor="let row of keypad">
+          <div class="keypad-row">
+            <button *ngFor="let key of row" (click)="onKeypadPress(key)">
+              {{ key }}
+            </button>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+</div>
+
+

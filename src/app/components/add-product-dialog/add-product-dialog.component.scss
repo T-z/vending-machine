@@ -1,0 +1,18 @@
+
+:host{
+
+  min-width: 350px;
+  max-width: 500px;
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+  }
+}

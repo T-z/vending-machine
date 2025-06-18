@@ -1,0 +1,76 @@
+:host{
+
+    h1 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+
+  .dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    gap: 12px;;
+    overflow-y: auto;
+    border:1px solid ;
+    border-radius: 0.5em;;
+    padding: 15px;
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+      .product-info{
+        h3 {
+          color: #3498db;
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+        p {
+          color: #7f8c8d;
+          margin-bottom: 5px;
+        }
+
+      }
+
+    }
+  }
+
+  .button-container {
+    padding-top: 20px;
+    margin-top: auto; // Pushes the button to the bottom
+    border-top: 1px solid #eee;
+  }
+
+  .add-product-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+    }
+  }
+}
+
+

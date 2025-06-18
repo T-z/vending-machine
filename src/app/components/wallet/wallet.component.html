@@ -1,0 +1,13 @@
+<div class="wallet">
+  <h3>Wallet</h3>
+  <div class="coins">
+    @for (coin of coins; let index = $index; track coin){
+      <button
+      (click)="insertCoin(index)"
+      class="coin-button"
+    >
+      {{ coin.value| number:'1.2-2' }}
+    </button>
+    }
+  </div>
+</div>
