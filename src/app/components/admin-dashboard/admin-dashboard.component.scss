@@ -49,21 +49,43 @@
     padding-top: 20px;
     margin-top: auto; // Pushes the button to the bottom
     border-top: 1px solid #eee;
+
+    .add-product-btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+      }
+    }
   }
 
-  .add-product-btn {
-    background-color: #3498db;
+  .view-btn ,.delete-btn {
+    background-color: gray;
     color: white;
     border: none;
     border-radius: 4px;
     padding: 12px 20px;
     font-size: 14px;
     font-weight: 600;
+    margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #2980b9;
+      background-color: #0f0f0f;
     }
 
     &:focus {

@@ -14,10 +14,10 @@
           </div>
 
           <div class="card-actions">
-            <button class="action-btn view-btn"
+            <button class="view-btn"
                     [disabled]="!product.id"
                     (click)="viewProduct(product.id ?? '')">View</button>
-            <button class="action-btn delete-btn"
+            <button class="delete-btn"
                     [disabled]="!product.id"
                     (click)="deleteProduct(product.id ?? '')">Delete</button>
           </div>
