@@ -54,6 +54,11 @@ export class VendingMaschineComponent {
       }
 
       const product = this.products()[productIndex];
+
+      if(product.price > this.balance().amount){
+            alert( "not enough money for the goods")
+      }
+
        // Try to buy the product
        this.vendingService.buyProduct(product.id as string).subscribe({
         next: (boughtProduct) => {
